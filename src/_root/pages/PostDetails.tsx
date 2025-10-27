@@ -4,16 +4,25 @@ import { Button } from "@/components/ui/button";
 import { useUserContext } from "@/context/AuthContext";
 import { useGetPostById } from "@/lib/react-query/queriesAndMutations";
 import { multiFormatDateString } from "@/lib/utils";
-import { Link, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 
 const PostDetails = () => {
   const { id } = useParams();
-  const { data: post, isPending } = useGetPostById(id || "");
+  const {
+    data: post,
+    isPending,
+    isFetching,
+    isError,
+  } = useGetPostById(id || "");
   const { user } = useUserContext(); // 取得這個使用者的資料
 
-  const handleDeletePost = () => {
-    
-  };
+  const handleDeletePost = () => {};
+
+  if (isError) return <Navigate to="*" replace />;
+
+  // 3) 成功但拿到空（例如後端回 null/undefined）
+  if (!post && !isFetching) return <p role="alert">Post is unavailable.</p>;
+
   return (
     <div className="post_details-container">
       {isPending ? (

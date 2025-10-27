@@ -12,6 +12,7 @@ import AuthLayout from "./_auth/AuthLayout";
 import RootLayout from "./_root/RootLayout";
 
 import { Toaster } from "@/components/ui/sonner";
+import NotFoundPage from "./_root/pages/NotFoundPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/update-post/:id" element={<EditPost />} />
           <Route path="/posts/:id" element={<PostDetails />} />
           {/* :id/* "*"表示所有profile後面寫的都指向這個id的profile */}
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
       <Toaster />
