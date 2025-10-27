@@ -23,7 +23,6 @@ import {
   useUpdatePost,
 } from "@/lib/react-query/queriesAndMutations";
 import type { PostDoc } from "@/types";
-import Loader from "../shared/Loader";
 
 // post?用來表示可能有存在也可能不存在
 // Models來自appwrite

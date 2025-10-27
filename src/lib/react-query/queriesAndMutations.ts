@@ -25,9 +25,8 @@ import {
   searchPosts,
   getInfinitePosts,
 } from "../appwrite/api";
-import type { INewUser, INewPost, IUpdatePost, PostDoc } from "@/types";
+import type { INewUser, INewPost, IUpdatePost } from "@/types";
 import { QUERY_KEYS } from "./queryKeys";
-import type { Models } from "appwrite";
 
 export const useCreateUserAccount = () => {
   return useMutation({

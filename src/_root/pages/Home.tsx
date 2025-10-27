@@ -7,11 +7,7 @@ const Home = () => {
   // const posts = null;
   // 上面兩行是測試isPostLoading && !posts能不能使用的測試性code
 
-  const {
-    data: posts,
-    isPending: isPostLoading,
-    isError: isErrorPosts,
-  } = useGetRecentPosts();
+  const { data: posts, isPending: isPostLoading } = useGetRecentPosts();
 
   // console.log(useGetRecentPosts().data);
 

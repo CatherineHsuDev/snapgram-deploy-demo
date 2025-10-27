@@ -7,7 +7,6 @@ import {
   useGetPosts,
   useSearchPosts,
 } from "@/lib/react-query/queriesAndMutations";
-import type { PostDoc } from "@/types";
 import { useState, useEffect, type ChangeEvent } from "react";
 import { useInView } from "react-intersection-observer";
 

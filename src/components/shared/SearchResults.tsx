@@ -1,8 +1,6 @@
 import type { PostDoc } from "@/types";
-import React from "react";
 import Loader from "./Loader";
 import GridPostList from "./GridPostList";
-import { searchPosts } from "@/lib/appwrite/api";
 import type { Models } from "appwrite";
 type SearchResultsProps = {
   isSearchFetching: boolean;

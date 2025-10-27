@@ -1,5 +1,5 @@
 // allow to drop somethin in --> npm i react-dropzone
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { type FileWithPath, useDropzone } from "react-dropzone";
 import { Button } from "../ui/button";
 

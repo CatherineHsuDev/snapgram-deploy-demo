@@ -1,7 +1,5 @@
 import { useUserContext } from "@/context/AuthContext";
 import type { PostDoc } from "@/types";
-import type { Models } from "appwrite";
-import React from "react";
 import { Link } from "react-router-dom";
 import PostStats from "./PostStats";
 

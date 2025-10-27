@@ -4,7 +4,7 @@ import {
   useLikePost,
   useSavePost,
 } from "@/lib/react-query/queriesAndMutations";
-import { checkIsLiked, checkIsSaved } from "@/lib/utils";
+import { checkIsLiked } from "@/lib/utils";
 import type { PostDoc, SaveDoc, UserDoc } from "@/types";
 
 import React, { useState, useEffect } from "react";
