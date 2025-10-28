@@ -88,6 +88,8 @@ export async function signInAccount(user: { email: string; password: string }) {
 // }
 
 export async function getCurrentUser() {
+  console.log("running getCurrentUser in api.ts");
+
   try {
     const currentAccount = await account.get();
 

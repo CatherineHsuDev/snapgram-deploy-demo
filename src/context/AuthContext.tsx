@@ -28,7 +28,8 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const navigate = useNavigate();
   const [user, setUser] = useState<IUser>(INITIAL_USER);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  console.log("running in AuthProvider");
 
   const checkAuthUser = async () => {
     setIsLoading(true);
@@ -58,16 +59,18 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   useEffect(() => {
-    // const cookieFallback = localStorage.getItem("cookieFallback");
-    if (
-      localStorage.getItem("cookieFallback") === "[]" ||
-      localStorage.getItem("cookieFallback") === null
-      // cookieFallback === undefined
-    ) {
-      navigate("/sign-in");
-    }
-
-    checkAuthUser();
+    // // const cookieFallback = localStorage.getItem("cookieFallback");
+    // if (
+    //   localStorage.getItem("cookieFallback") === "[]" ||
+    //   localStorage.getItem("cookieFallback") === null
+    //   // cookieFallback === undefined
+    // ) {
+    //   navigate("/sign-in");
+    // }
+    // checkAuthUser();
+    (async () => {
+      await checkAuthUser(); // 只檢查，不導頁
+    })();
   }, []);
 
   const value = {

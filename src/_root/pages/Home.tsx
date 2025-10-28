@@ -1,12 +1,16 @@
 import Loader from "@/components/shared/Loader";
 import { useGetRecentPosts } from "@/lib/react-query/queriesAndMutations";
 import PostCard from "@/components/shared/PostCard";
+import { useUserContext } from "@/context/AuthContext";
 
 const Home = () => {
   // const isPostLoading = true;
   // const posts = null;
   // 上面兩行是測試isPostLoading && !posts能不能使用的測試性code
-
+  console.log("進到home.tsx");
+  console.log("即將進行useGetRecentPosts()");
+  const { isAuthenticated, isLoading } = useUserContext(); // ← 新增
+  if (isLoading || !isAuthenticated) return null; // ← 新增：驗證前/未登入不渲染
   const { data: posts, isPending: isPostLoading } = useGetRecentPosts();
 
   // console.log(useGetRecentPosts().data);
