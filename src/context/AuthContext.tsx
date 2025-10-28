@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import { createContext, useContext, useEffect, useState } from "react";
 import type { IContextType, IUser } from "@/types";
 import { getCurrentUser } from "@/lib/appwrite/api";
