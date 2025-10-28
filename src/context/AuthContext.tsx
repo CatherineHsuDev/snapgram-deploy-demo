@@ -29,7 +29,7 @@ const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [user, setUser] = useState<IUser>(INITIAL_USER);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  console.log("running in AuthProvider");
+  // console.log("running in AuthProvider");
 
   const checkAuthUser = async () => {
     setIsLoading(true);
