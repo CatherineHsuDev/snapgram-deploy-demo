@@ -175,7 +175,7 @@
     background: #7878a3;
   }
   .common-container {
-    @apply flex flex-col flex-1 items-center gap-10 overflow-scroll py-10 px-5 md:px-8 lg:p-14;
+    @apply flex flex-col flex-1 items-center gap-10 overflow-auto py-10 px-5 md:px-8 lg:p-14;
   }
   /* All Users */
   .user-container {
@@ -212,7 +212,7 @@
   }
   /* Post Details */
   .post_details-container {
-    @apply flex flex-col flex-1 gap-10 overflow-scroll py-10 px-5 md:p-14  items-center;
+    @apply flex flex-col flex-1 gap-10 overflow-auto py-10 px-5 md:p-14  items-center;
   }
 
   .post_details-card {
@@ -233,7 +233,7 @@
 
   /* Profile */
   .profile-container {
-    @apply flex flex-col items-center flex-1 gap-10 overflow-scroll py-10 px-5 md:p-14;
+    @apply flex flex-col items-center flex-1 gap-10 overflow-auto py-10 px-5 md:p-14;
   }
 
   .profile-inner_container {
@@ -245,7 +245,7 @@
   }
   /* Saved */
   .saved-container {
-    @apply flex flex-col flex-1 items-center gap-10 overflow-scroll py-10 px-5 md:p-14;
+    @apply flex flex-col flex-1 items-center gap-10 overflow-auto py-10 px-5 md:p-14;
   }
 
   /* Bottom bar */
