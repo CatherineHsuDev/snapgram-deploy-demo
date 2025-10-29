@@ -188,7 +188,7 @@
 
   /* Explore */
   .explore-container {
-    @apply flex flex-col flex-1 items-center overflow-scroll py-10 px-5 md:p-14;
+    @apply flex flex-col flex-1 items-center overflow-auto py-10 px-5 md:p-14;
   }
 
   .explore-inner_container {
